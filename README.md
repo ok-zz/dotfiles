@@ -14,7 +14,5 @@ cd ~/.dotfiles
 rake install
 ```
 
-After installing, open a new terminal window to see the effects.
-
 Scripts in /setup don't get executed at install but have to get run manually for now.
 Scripts in /scripts don't serve any setup prupose.
