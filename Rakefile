@@ -5,6 +5,7 @@ desc "install the dot files into user's home directory"
 task :install do
   install_oh_my_zsh
   switch_to_zsh
+  install_fonts
   replace_all = false
   files = Dir['*'] - %w[Rakefile README.textile scripts setup]
   files.each do |file|
@@ -85,5 +86,18 @@ def install_oh_my_zsh
     else
       puts "skipping oh-my-zsh, you will need to change ~/.zshrc"
     end
+  end
+end
+
+def install_fonts
+  print "install fonts? [ynq] "
+  case $stdin.gets.chomp
+  when 'y'
+    puts "installing fonts"
+    system %Q{ cp -f $PWD/fonts/* $HOME/Library/Fonts }
+  when 'q'
+    exit
+  else
+    puts "skipping fonts"
   end
 end
