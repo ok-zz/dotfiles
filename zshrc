@@ -14,6 +14,12 @@ plugins=(brew extract gem git autojump zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+# Hacking the PATH to prefer /usr/local/bin installations
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# Nice way to set JAVA_HOME
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
 # Customize to your needs...
 alias ll='ls -laG'
 
