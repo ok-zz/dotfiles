@@ -20,6 +20,13 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # Nice way to set JAVA_HOME
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
+# More Java stuff
+export DERBY_HOME=/Users/d053363/Dev/runspace/db-derby-10.11.1.1-bin
+export NEO=/Users/d053363/Dev/runspace/hcp/neo-java-web-tomcat-sdk-latest/tools
+export PATH=$PATH:$NEO
+
+alias neo='$NEO/neo.sh'
+
 # Customize to your needs...
 alias ll='ls -laG'
 
